@@ -210,7 +210,7 @@ export const room = [
   },
   {
     id: "6",
-    name: "Estimating",
+    name: "Estimation",
     img: blueSofa,
   },
   {

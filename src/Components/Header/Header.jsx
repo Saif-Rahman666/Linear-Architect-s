@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
-import header1 from "../../assets/images/headerImage.png";
 import { Switch } from "@material-tailwind/react";
 import { ThemeBgContext } from "../ContextWrapper/ThemeContext";
+import { Experience } from "../Animation/Experience";
+import { Canvas } from "@react-three/fiber";
 
 const Header = ({ topRef }) => {
   const { theme, handleTheme } = useContext(ThemeBgContext);
@@ -9,7 +10,7 @@ const Header = ({ topRef }) => {
   return (
     <div ref={topRef} className="mx-auto pt-16">
       <div className="sm:grid-cols-1 grid grid-cols-2 justify-items-center items-center">
-        <div className="sm:w-full sm:pl-4 w-4/5 pl-24">
+        <div className="sm:w-full sm:pl-4 w-5/5 pl-24">
           <Switch
             label={theme === "light" ? "Switch to Dark" : "Switch to Light"}
             defaultChecked={theme === "dark" ? true : false}
@@ -53,23 +54,17 @@ const Header = ({ topRef }) => {
             </button>
           </div>
         </div>
-        <div className="sm:pl-4 mt-4">
-          <div>
-            <h2
-              className={
-                theme === "light"
-                  ? "sm:text-3xl text-5xl pb-4 font-russonOne font-medium no-underline align-middle tracking-wide normal-case leading-normal text-dark"
-                  : "sm:text-3xl text-5xl pb-4 font-russonOne font-medium no-underline align-middle tracking-wide normal-case leading-normal text-white"
-              }
-            >
-              Modern Design
-            </h2>
+        <div className="sm:w-full sm:pl-4 w-4/5 mt-4">
+          <div 
+          className="sm:h-[475px] h-[765px] w-full bg-no-repeat bg-center relative z-10 header rounded-xl">
+          <Canvas camera ={{
+            fov : 64,
+            position : [2.3, 1.5, 2.3],
+          }}>
+            <Experience />
+          </Canvas>
           </div>
-          <img
-            className="sm:h-[475px] h-[765px] w-full bg-no-repeat bg-center relative z-10 header rounded-xl"
-            src={header1}
-            alt="header-phone"
-          ></img>
+          
         </div>
       </div>
     </div>
