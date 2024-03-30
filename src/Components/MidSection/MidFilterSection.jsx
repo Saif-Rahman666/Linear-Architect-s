@@ -60,7 +60,7 @@ const MidFilterSection = () => {
                 : "sm:text-3xl sm:w-full w-96 text-6xl font-bold font-inter no-underline aligin-middle tracking-wide normal-case leading-none text-white"
             }
           >
-            Check out some of the news
+            Check out some of the Designs
           </h2>
           <MidButton
             buttons={buttons}

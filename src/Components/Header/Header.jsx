@@ -50,7 +50,7 @@ const Header = ({ topRef }) => {
           </div>
           <div className="pb-20">
             <button className="pushable mt-4">
-              <span className="front">Start now</span>
+              <span className="front">Scroll Down</span>
             </button>
           </div>
         </div>

@@ -7,7 +7,7 @@ import blueSofa from "../assets/images/trace.svg";
 export const navbarData = [
   {
     id: "1",
-    name: "News",
+    name: "Designs",
     link: "news",
   },
   {
