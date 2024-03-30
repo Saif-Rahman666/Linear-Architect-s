@@ -15,7 +15,7 @@ const Footer = () => {
           <div>
             <img className="h-14 cursor-pointer" src={logo} alt="logo"></img>
           </div>
-          <div className="mt-5">
+          {/* <div className="mt-5">
             <img
               className="h-8 cursor-pointer"
               src={appleStore}
@@ -28,11 +28,11 @@ const Footer = () => {
               src={googlePlay}
               alt="apple-store"
             ></img>
-          </div>
+          </div> */}
         </div>
         <div className="sm:pr-4 h-64">
           <h3 className="text-dark font-inter font-medium text-lg no-underline align-middle tracking-wide normal-case">
-            Features
+            Address
           </h3>
           {FooterData1.map((item) => {
             return (
@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
         <div className="sm:pr-8 h-64">
           <h3 className="text-dark font-inter font-medium text-lg no-underline align-middle tracking-wide normal-case">
-            Features
+            Contact Us
           </h3>
           {FooterData2.map((item) => {
             return (
@@ -60,7 +60,7 @@ const Footer = () => {
         </div>
         <div className="sm:pl-8 h-64">
           <h3 className="text-dark font-inter font-medium text-lg no-underline align-middle tracking-wide normal-case">
-            Features
+            Map
           </h3>
           {FooterData3.map((item) => {
             return (

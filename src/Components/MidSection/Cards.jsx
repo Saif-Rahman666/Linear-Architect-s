@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { cardData } from "../../DataForPage/dummyData";
-import googlePlay from "../../assets/images/google-play.svg";
-import appleStore from "../../assets/images/apple-store.svg";
+import googlePlay from "../../assets/images/Linear_Architects_demo.png";
+import appleStore from "../../assets/images/Linear_Architects_Horizon.jpeg";
 import star from "../../assets/images/star.svg";
 import starWhite from "../../assets/images/starWhite.svg";
 import { motion } from "framer-motion";
@@ -12,6 +12,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { ThemeBgContext } from "../ContextWrapper/ThemeContext";
+import CountUp from "react-countup";
 
 const Cards = () => {
   const { theme } = useContext(ThemeBgContext);
@@ -26,7 +27,7 @@ const Cards = () => {
               : "sm:text-5xl text-white text-6xl font-bold pt-20 no-underline font-inter align-middle tracking-wide normal-case leading-none cursor-pointer"
           }
         >
-          Request a demo
+          Request a demo by calling us
         </h2>
         <p
           className={
@@ -35,23 +36,23 @@ const Cards = () => {
               : "sm:text-xl text-white text-2xl font-normal pt-10 no-underline font-inter align-middle tracking-wide normal-case leading-none cursor-pointer"
           }
         >
-          Explore all the nice stuff that AxeL is providing and much more...{" "}
+          Explore all the nice stuff that Linear Architects is providing and much more...{" "}
         </p>
         <div className="w-full flex flex-row items-center justify-evenly pt-10">
           <div>
             <img
-              className="h-12 cursor-pointer"
+              className="h-17 cursor-pointer"
               src={googlePlay}
               alt="googleApp"
             ></img>
           </div>
-          <div>
+          {/* <div>
             <img
               className="h-12 cursor-pointer"
               src={appleStore}
               alt="googleApp"
             ></img>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="sm:grid-cols-1 grid grid-cols-3 items-center gap-8 content-between w-full pt-32">
@@ -86,14 +87,17 @@ const Cards = () => {
                     }
                   >
                     {item.title}
+                   
                   </Typography>
                   <Typography
+                   variant="h3"
                     className={
                       item.id === "1"
-                        ? "mb-2 fonm-inter font-light leading-normal no-underline align-middle tracking-wide normal-case h-32 text-white"
-                        : "mb-2 fonm-inter font-light  leading-normal no-underline align-middle tracking-wide normal-case h-32 text-dark"
+                        ? "mb-2 fonm-inter font-bold leading-normal no-underline align-middle tracking-wide normal-case h-25 text-white"
+                        : "mb-2 fonm-inter font-bold  leading-normal no-underline align-middle tracking-wide normal-case h-25 text-dark"
                     }
                   >
+                    <CountUp start={item.start} end={item.end} duration={item.duration} />
                     {item.text}
                   </Typography>
                 </CardBody>
@@ -109,7 +113,7 @@ const Cards = () => {
                         : "text-center pb-2 font-inter font-light leading-normal no-underline align-middle hover:animate-pulse tracking-wide cursor-pointer text-dark"
                     }
                   >
-                    See more
+                    Rating
                   </Typography>
                   <div className="flex flex-row justify-center">
                     {starList.map((index) => {

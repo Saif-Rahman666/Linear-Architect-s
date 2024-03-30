@@ -17,7 +17,7 @@ module.exports = withMT({
     },
     backgroundImage: {
       wrapperBg: "url('assets/images/LinA.svg')",
-      wrapperDark: "url('assets/images/LinAdark.svg')",
+      wrapperDark: "url('assets/images/LinAdark2.svg')",
     },
     container: {
       screens: {

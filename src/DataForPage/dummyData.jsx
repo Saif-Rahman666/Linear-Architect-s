@@ -17,12 +17,12 @@ export const navbarData = [
   },
   {
     id: "3",
-    name: "Features",
+    name: "Projects",
     link: "features",
   },
   {
     id: "4",
-    name: "Room",
+    name: "Services",
     link: "room",
   },
   {
@@ -39,61 +39,53 @@ export const navbarData = [
 export const FooterData1 = [
   {
     id: "1",
-    text: "Modern",
+    text: "Dinajpur",
   },
   {
     id: "2",
-    text: "Decorations",
+    text: "Dhaka",
   },
   {
     id: "3",
-    text: "Events",
-  },
-  {
-    id: "4",
-    text: "Careere",
-  },
-  {
-    id: "5",
-    text: "Forum",
-  },
-  {
-    id: "6",
-    text: "Contacts",
-  },
+    text: "Chittagong",
+  }
 ];
 export const FooterData2 = [
   {
     id: "1",
-    text: "Privacy policy",
+    text: "Phone",
     path: "Resources",
   },
   {
     id: "2",
-    text: "Terms of use",
+    text: "Email",
   },
   {
     id: "3",
-    text: "Cookies",
-  },
-];
-export const FooterData3 = [
-  {
-    id: "1",
-    text: "Support",
-  },
-  {
-    id: "2",
-    text: "Customer support",
-  },
-  {
-    id: "3",
-    text: "Media",
+    text: "Whatsapp",
   },
   {
     id: "4",
-    text: "Marketing",
+    text: "Facebook",
   },
+];
+export const FooterData3 = [
+  // {
+  //   id: "1",
+  //   text: "Support",
+  // },
+  // {
+  //   id: "2",
+  //   text: "Customer support",
+  // },
+  // {
+  //   id: "3",
+  //   text: "Media",
+  // },
+  // {
+  //   id: "4",
+  //   text: "Marketing",
+  // },
 ];
 
 export const sliderData = [
@@ -167,18 +159,27 @@ export const tabsData = [
 export const cardData = [
   {
     id: "0",
-    title: "Ready to get started?",
-    text: "Explore Linear Architect's Pricing and chose the plan that suites you the best, or send as an inquery about invidual plan. You can also request a demo app to test in a secure enviroment.",
+    title: "Satisfied Clients",
+    start: 100, // Start point
+    end: 900,   // End point
+    duration: 10.5, // Duration of animation
+    text: "+",
   },
   {
     id: "1",
-    title: "Room",
-    text: "Customize your own Bedroom, LivingRoom, Kitchen, Office and much more. Anytime, in a matter of seconds.",
+    title: "Designs Completed",
+    start: 880, // Start point
+    end: 1950,   // End point
+    duration: 10.5, // Duration of animation
+    text: "+",
   },
   {
     id: "2",
-    title: "Connect to AxeL",
-    text: "Setup your room on AxeL in a few seconds. All you need is few images and creative ideas and your business is ready.",
+    title: "Awards Won",
+    start: 1, // Start point
+    end: 15,   // End point
+    duration: 10.5, // Duration of animation
+    text: "+",
   },
 ];
 

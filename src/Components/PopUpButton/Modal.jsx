@@ -30,16 +30,16 @@ const Modal = ({ open, setOpen }) => {
           animate={{ opacity: 1 }}
           transition={{ type: "Tween", duration: 2 }}
         >
-          <h5 className="cursor-pointer text-4xl text-blue-500 font-inter font-medium tracking-tight pt-4">
+          <h5 className="cursor-pointer text-4xl text-gray-700 font-inter font-medium tracking-tight pt-4">
             Hello There 🖐🏻
           </h5>
-          <p className="text-lg text-blue-500 font-inter font-medium tracking-tight pt-4">
+          <p className="text-lg text-gray-700  font-inter font-medium tracking-tight pt-4">
             Welcome to our website.
           </p>
-          <span className="text-md text-blue-500 font-inter font-medium tracking-tight pt-4">
-            Ask us anything.
+          <span className="text-md text-gray-700 font-inter font-medium tracking-tight pt-4">
+            Call us at +8801301370905 <br></br> or Drop an email at lineararchitectsltd@gmail.com
           </span>
-          <div className="pt-8">
+          {/* <div className="pt-8">
             <form onSubmit={handleSubmit}>
               <input
                 type="text"
@@ -50,7 +50,7 @@ const Modal = ({ open, setOpen }) => {
                 onChange={(e) => setMessage(e.target.value)}
               ></input>
             </form>
-          </div>
+          </div> */}
           <Tooltip content="Close" placement="left">
             <div
               className=" absolute top-4 right-4 text-white cursor-pointer"
