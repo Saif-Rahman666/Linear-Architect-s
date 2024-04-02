@@ -8,11 +8,9 @@ const Navbar = () => {
   const { theme } = useContext(ThemeBgContext);
   const [scroll, setScroll] = useState(false);
   const handleScroll = () => {
-    if (window.scrollY > 50) {
+    
       setScroll(true);
-    } else {
-      setScroll(false);
-    }
+     
   };
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -21,11 +19,11 @@ const Navbar = () => {
     };
   }, [scroll]);
   return (
-    <div>
+    <div className="w-full" style={{display: 'flex', justifyContent: 'center'}}>
       <div
         className={
           scroll
-            ? "sm:hidden h-16 w-full fixed flex transition items-center ease-in-out duration-500 bg-white-200 rounded-sm bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 z-20"
+            ? "sm:hidden h-16 w-full fixed flex transition items-center ease-in-out duration-500 bg-yellow-600 rounded-sm bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 z-20"
             : "sm:hidden bg-transparent h-16 w-full fixed transition ease-in-out duration-500 flex items-center z-20"
         }
       >

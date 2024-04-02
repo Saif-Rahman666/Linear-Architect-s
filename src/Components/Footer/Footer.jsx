@@ -74,7 +74,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex items-center justify-center">
-        <hr className="sm:w-full h-px w-4/5 bg-gray-400 opacity-50 outline-none border-none" />
+        <hr className="sm:w-full h-px w-4/5 bg-yellow-400 opacity-50 outline-none border-none" />
       </div>
       <div className="flex justify-around items-center py-6">
         <div>

@@ -8,9 +8,9 @@ const Header = ({ topRef }) => {
   const { theme, handleTheme } = useContext(ThemeBgContext);
 
   return (
-    <div ref={topRef} className="mx-auto pt-16">
-      <div className="sm:grid-cols-1 grid grid-cols-2 justify-items-center items-center">
-        <div className="sm:w-full sm:pl-4 w-5/5 pl-24">
+    <div ref={topRef} className="mx-auto pt-20">
+      <div className="w-full flex flex-col items-center justify-center">
+        <div className="sm:w-full sm:pl-4 w-full  pl-24">
           <Switch
             label={theme === "light" ? "Switch to Dark" : "Switch to Light"}
             defaultChecked={theme === "dark" ? true : false}
@@ -54,7 +54,7 @@ const Header = ({ topRef }) => {
             </button>
           </div>
         </div>
-        <div className="sm:w-full sm:pl-4 w-4/5 mt-4">
+        <div className="sm:w-full sm:pl-4 w-full  mt-4">
           <div 
           className="sm:h-[475px] h-[765px] w-full bg-no-repeat bg-center relative z-10 header rounded-xl">
           <Canvas camera ={{
