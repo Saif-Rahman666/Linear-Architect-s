@@ -4,6 +4,7 @@ import { sliderData } from "../../DataForPage/dummyData";
 import MidChild from "./MidChild";
 import { motion } from "framer-motion";
 import { ThemeBgContext } from "../ContextWrapper/ThemeContext";
+import Modal from "react-modal"; // Import Modal component
 
 const MidFilterSection = () => {
   const buttons = [
@@ -24,6 +25,8 @@ const MidFilterSection = () => {
   const [selected, setSelected] = useState("1");
   const [click, setClick] = useState(false);
   const [data, setData] = useState([]);
+  const [fullscreenImage, setFullscreenImage] = useState(null);
+  const [modalIsOpen, setModalIsOpen] = useState(false); // State for modal
 
   const filterData = (button) => {
     const filter = sliderData.filter((item) => item.id === button);
@@ -38,6 +41,16 @@ const MidFilterSection = () => {
     };
     putData(sliderData);
   }, []);
+
+  const handleImageClick = (img) => {
+    setFullscreenImage(img);
+    setModalIsOpen(true); // Open modal when image is clicked
+  };
+
+  const handleCloseFullscreen = () => {
+    setFullscreenImage(null);
+    setModalIsOpen(false); // Close modal when image is clicked
+  };
 
   return (
     <div className="mx-auto pt-72 pb-56" id="news">
@@ -69,9 +82,32 @@ const MidFilterSection = () => {
           ></MidButton>
         </motion.div>
         <div className="ml-20 pb-4 relative mx-auto w-11/12 rounded-xl drop-shadow-2xl">
-          <MidChild data={data} click={click}></MidChild>
+          <MidChild
+            data={data}
+            click={click}
+            onImageClick={handleImageClick}
+          ></MidChild>
         </div>
       </div>
+      {/* Modal for displaying the selected image */}
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={handleCloseFullscreen}
+        contentLabel="Fullscreen Image"
+        style={{
+          overlay: {
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+          },
+          content: {
+            maxWidth: "80%",
+            maxHeight: "80%",
+            margin: "auto",
+          },
+        }}
+      >
+        <button onClick={handleCloseFullscreen}>Close</button>
+        {fullscreenImage && <img src={fullscreenImage} alt="fullscreen" />}
+      </Modal>
     </div>
   );
 };
