@@ -10,15 +10,15 @@ const MidFilterSection = () => {
   const buttons = [
     {
       id: "1",
-      name: "Design1",
+      name: "Bedroom",
     },
     {
       id: "2",
-      name: "Design2",
+      name: "Dining",
     },
     {
       id: "3",
-      name: "Design3",
+      name: "Kitchen",
     },
   ];
   const { theme } = useContext(ThemeBgContext);

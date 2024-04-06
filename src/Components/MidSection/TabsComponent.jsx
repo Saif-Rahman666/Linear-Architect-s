@@ -72,7 +72,7 @@ const TabsComponent = () => {
           }
         >
           Linear Architect's offers many great features. You can create your own room,
-          request a service, buy modern looking furniture, sell a furniture
+          request a service, make modern looking Design, generate ideas for you
           and so much more. Take a sneak peek at each of them.
         </p>
 
@@ -84,7 +84,7 @@ const TabsComponent = () => {
           <TabsHeader className="flex justify-center items-center content-center bg-gray-100">
             {tabsData.map(({ label, value }) => (
               <Tab key={value} value={value}>
-                <p className="text-royalBlue font-inter leading-normal no-underline align-middle tracking-wide normal-case">
+                <p className="text-black font-inter leading-normal no-underline align-middle tracking-wide normal-case">
                   {label}
                 </p>
               </Tab>
