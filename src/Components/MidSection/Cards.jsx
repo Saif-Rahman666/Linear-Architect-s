@@ -46,13 +46,6 @@ const Cards = () => {
               alt="googleApp"
             ></img>
           </div>
-          {/* <div>
-            <img
-              className="h-12 cursor-pointer"
-              src={appleStore}
-              alt="googleApp"
-            ></img>
-          </div> */}
         </div>
       </div>
       <div className="sm:grid-cols-1 grid grid-cols-3 items-center gap-8 content-between w-full pt-32">

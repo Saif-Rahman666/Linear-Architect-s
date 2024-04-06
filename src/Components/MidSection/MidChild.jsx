@@ -26,6 +26,7 @@ const MidChild = ({ data, click, onImageClick }) => {
                 <div className="absolute right-0 -z-10">
                   <motion.img
                     className="w-full"
+                    whileHover={{ scale: 1.1, cursor: "pointer" }}
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: click ? "525px" : "525px", opacity: 1 }}
                     transition={{ type: "tween", duration: 3 }}

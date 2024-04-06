@@ -23,15 +23,10 @@ const TabsComponent = () => {
   };
 
   const handleTabClick = (value) => {
-    // Find the tab data
     const tab = tabsData.find((tab) => tab.value === value);
-    if (tab) {
-      return tab.images;
-    }
-    return [];
+    return tab ? tab.images : [];
   };
 
-  // Slider settings
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -63,11 +58,9 @@ const TabsComponent = () => {
     <div id="features" className="flex flex-col justify-center items-center">
       <div className="w-4/5 pl-24">
         <h1
-          className={
-            theme === "light"
-              ? "sm:text-4xl text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark"
-              : "sm:text-4xl text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-white"
-          }
+          className={`${
+            theme === "light" ? "text-dark" : "text-white"
+          } sm:text-4xl text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-center`}
         >
           Projects
         </h1>
@@ -105,11 +98,14 @@ const TabsComponent = () => {
           >
             {tabsData.map(({ value }) => (
               <TabPanel key={value} value={value}>
-                <Slider {...sliderSettings}>
+                <Slider {...sliderSettings} className="gap-4">
                   {handleTabClick(value).map((image, index) => (
-                    <div key={index}>
+                    <div
+                      key={index}
+                      className="px-2 transition-transform duration-300 transform hover:rotate-3"
+                    >
                       <img
-                        className="h-[550px] w-[350px] mx-auto"
+                        className="h-[550px] w-[350px] mx-auto my-2 object-cover rounded-lg shadow-lg cursor-pointer"
                         src={image}
                         alt="phone"
                         onClick={() => openModal(image)}
@@ -123,7 +119,6 @@ const TabsComponent = () => {
         </Tabs>
       </div>
 
-      {/* Modal for displaying the selected image */}
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}

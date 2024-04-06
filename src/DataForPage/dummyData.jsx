@@ -2,7 +2,13 @@ import chair from "../assets/images/Living Room.jpg";
 import sofa2 from "../assets/images/LivingRoom2.jpg";
 import sofa3 from "../assets/images/LivingRoom3.jpg";
 import phone1 from "../assets/images/bedRoom.png";
-import blueSofa from "../assets/images/trace.svg";
+import blueSofa from "../assets/images/dot.svg";
+import bedRoom1 from "../assets/images/bedroom1.jpg";
+import bedRoom2 from "../assets/images/bedroom2.jpg";
+import bedRoom3 from "../assets/images/bedroom3.jpg";
+import livingRoom1 from "../assets/images/living1.jpg";
+import livingRoom2 from "../assets/images/living2.jpg";
+import livingRoom3 from "../assets/images/living3.jpg";
 
 export const navbarData = [
   {
@@ -101,7 +107,7 @@ export const tabsData = [
     label: "Bedroom",
     value: "bedroom",
     desc: `Linear Architect's is your best firend for interior design, download the app and feel free to explore beautifule modern and premium designs.`,
-    images: [phone1, sofa2, phone1],
+    images: [bedRoom1, bedRoom2, bedRoom3],
     
   },
   {
@@ -109,7 +115,7 @@ export const tabsData = [
     label: "LivingRoom",
     value: "livingroom",
     desc: "Linear Architect's is your best firend for interior design, download the app and feel free to explore beautifule modern and premium designs.",
-    images: [phone1, phone1, phone1],
+    images: [livingRoom1, livingRoom2, livingRoom3],
     
   },
 

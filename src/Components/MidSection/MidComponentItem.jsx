@@ -38,9 +38,6 @@ const MidComponentItem = ({ title, img, text, reverse }) => {
             >
               {text}
             </p>
-            <button className="pushable mt-4">
-              <span className="front">Start now</span>
-            </button>
           </motion.div>
           <motion.div
             className=""
