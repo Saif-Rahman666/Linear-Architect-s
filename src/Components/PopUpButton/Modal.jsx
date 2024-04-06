@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { Tooltip } from "@material-tailwind/react";
 
 const Modal = ({ open, setOpen }) => {
-  const [message, setMessage] = useState("");
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(message);
-    setMessage("");
-    setOpen(false);
-  };
+  // const [message, setMessage] = useState("");
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log(message);
+  //   setMessage("");
+  //   setOpen(false);
+  // };
   return (
     <div>
       <motion.div

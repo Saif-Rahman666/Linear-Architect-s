@@ -1,9 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { ThemeBgContext } from "../ContextWrapper/ThemeContext";
 
 const MidChild = ({ data, click, onImageClick }) => {
-  const { theme } = useContext(ThemeBgContext);
   
   return (
     <div>

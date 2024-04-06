@@ -1,13 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 const NewsLetter = () => {
-  const [email, setEmail] = useState("");
-
-  const handleEmail = (e) => {
-    e.preventDefault();
-    setEmail("lineararchitectsltd@gmail.com");
-    console.log("email", email);
-  };
 
   return (
     <div className="flex items-center justify-center content-center justify-items-center relative">

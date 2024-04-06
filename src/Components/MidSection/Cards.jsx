@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { cardData } from "../../DataForPage/dummyData";
-import googlePlay from "../../assets/images/Linear_Architects_demo.png";
-import appleStore from "../../assets/images/Linear_Architects_Horizon.jpeg";
+import logo from "../../assets/images/Linear_Architects_demo.png";
 import star from "../../assets/images/star.svg";
 import starWhite from "../../assets/images/starWhite.svg";
 import { motion } from "framer-motion";
@@ -42,8 +41,8 @@ const Cards = () => {
           <div>
             <img
               className="h-17 cursor-pointer"
-              src={googlePlay}
-              alt="googleApp"
+              src={logo}
+              alt="Logo"
             ></img>
           </div>
         </div>

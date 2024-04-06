@@ -1,11 +1,9 @@
 import React from "react";
 import {
-  FaMapMarkerAlt,
   FaPhoneAlt,
   FaWhatsapp,
   FaFacebook,
 } from "react-icons/fa";
-import logo from "../../assets/images/trace.svg";
 // import MapComponent from "./MapComponent";
 
 const Footer = () => {
