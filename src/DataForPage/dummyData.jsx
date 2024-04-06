@@ -70,22 +70,6 @@ export const FooterData2 = [
   },
 ];
 export const FooterData3 = [
-  // {
-  //   id: "1",
-  //   text: "Support",
-  // },
-  // {
-  //   id: "2",
-  //   text: "Customer support",
-  // },
-  // {
-  //   id: "3",
-  //   text: "Media",
-  // },
-  // {
-  //   id: "4",
-  //   text: "Marketing",
-  // },
 ];
 
 export const sliderData = [
