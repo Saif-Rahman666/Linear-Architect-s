@@ -1,7 +1,4 @@
-import chair from "../assets/images/Living Room.jpg";
 import sofa2 from "../assets/images/LivingRoom2.jpg";
-import sofa3 from "../assets/images/LivingRoom3.jpg";
-import phone1 from "../assets/images/bedRoom.png";
 import blueSofa from "../assets/images/dot.svg";
 import bedRoom1 from "../assets/images/bedroom1.jpg";
 import bedRoom2 from "../assets/images/bedroom2.jpg";
@@ -9,6 +6,20 @@ import bedRoom3 from "../assets/images/bedroom3.jpg";
 import livingRoom1 from "../assets/images/living1.jpg";
 import livingRoom2 from "../assets/images/living2.jpg";
 import livingRoom3 from "../assets/images/living3.jpg";
+import kitchen1 from "../assets/images/kitchen1.jpg";
+import kitchen2 from "../assets/images/kitchen2.jpg";
+import kitchen3 from "../assets/images/kitchen3.jpg";
+import dining1 from "../assets/images/dining1.jpg";
+import dining2 from "../assets/images/dining2.jpg";
+import dining3 from "../assets/images/dining3.jpg";
+import office1 from "../assets/images/office1.jpg";
+import office2 from "../assets/images/office2.jpg";
+import office3 from "../assets/images/office3.jpg";
+import exterior1 from "../assets/images/exterior1.jpg";
+import exterior2 from "../assets/images/exterior2.jpg";
+import exterior3 from "../assets/images/exterior3.jpg";
+import dining4 from "../assets/images/dining4.jpg";
+import kitchen4 from "../assets/images/kitchen4.jpg";
 
 export const navbarData = [
   {
@@ -36,11 +47,6 @@ export const navbarData = [
     name: "Demo",
     link: "demo",
   },
-  // {
-  //   id: "6",
-  //   name: "Login",
-  //   link: "/",
-  // },
 ];
 export const FooterData1 = [
   {
@@ -91,14 +97,14 @@ export const sliderData = [
     title: "Room 2",
     text: "Linear Architect's is your best firend for interior design, download the app and feel free to explore beautifule modern and premium designs.",
     type: "Room2",
-    img: chair,
+    img: dining4,
   },
   {
     id: "3",
     title: "Room 3",
     text: "Linear Architect's is your best firend for interior design, download the app and feel free to explore beautifule modern and premium designs.",
     type: "Room3",
-    img: sofa3,
+    img: kitchen4,
   },
 ];
 export const tabsData = [
@@ -124,7 +130,7 @@ export const tabsData = [
     label: "Kitchen",
     value: "kitchen",
     desc: `Linear Architect's is your best firend for interior design, download the app and feel free to explore beautifule modern and premium designs.`,
-    images: [phone1, phone1, phone1],
+    images: [kitchen1, kitchen2, kitchen3],
     
   },
 
@@ -133,16 +139,24 @@ export const tabsData = [
     label: "Office",
     value: "office",
     desc: ` Linear Architect's is your best firend for interior design, download the app and feel free to explore beautifule modern and premium designs.`,
-    images: [phone1, phone1, phone1],
+    images: [office1, office2, office3],
     
   },
 
   {
     id: "4",
-    label: "KidsRoom",
+    label: "Dining Room",
     value: "kidsroom",
     desc: `Linear Architect's is your best firend for interior design, download the app and feel free to explore beautifule modern and premium designs.`,
-    images: [phone1, phone1, phone1],
+    images: [dining1, dining2, dining3],
+    
+  },
+  {
+    id: "5",
+    label: "Exterior",
+    value: "exterior",
+    desc: `Linear Architect's is your best firend for interior design, download the app and feel free to explore beautifule modern and premium designs.`,
+    images: [exterior1, exterior2, exterior3],
     
   },
 ];
