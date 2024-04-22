@@ -23,17 +23,17 @@ const Header = ({ topRef }) => {
                 : "sm:text-3xl text-5xl font-russonOne font-medium no-underline align-middle tracking-wide normal-case leading-normal text-white"
             }
           >
-            Welcome to{" "}
+            Welcome to <br/>
             <span
               className={
                 theme === "light"
-                  ? "sm:text-4xl text-dark text-6xl font-petitFormal font-bold"
-                  : "sm:text-4xl text-white text-6xl font-petitFormal font-bold"
+                  ? "sm:text-4xl text-yellow-500 text-6xl font-formal font-bold"
+                  : "sm:text-4xl text-yellow-500 text-6xl font-formal font-bold"
               }
             >
               Linear Architect's
             </span>{" "}
-            Website
+      
           </h1>
           <div className="mt-4">
             <p
@@ -43,15 +43,10 @@ const Header = ({ topRef }) => {
                   : "sm:text-lg w-4/5 font-inter font-medium no-underline align-middle tracking-wide normal-case text-white text-2xl"
               }
             >
-              Giving your home a propper makeover never was this easy. Modern
+              Giving your home a proper makeover never was this easy. Modern
               and stylish furniture for decent prices. Take a look what we offer
               with simple button click.
             </p>
-          </div>
-          <div className="pb-20">
-            <button className="pushable mt-4">
-              <span className="front">Scroll Down</span>
-            </button>
           </div>
         </div>
         <div className="sm:w-full sm:pl-4 w-full  mt-4">
