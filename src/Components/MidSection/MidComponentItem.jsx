@@ -5,12 +5,13 @@ import { ThemeBgContext } from "../ContextWrapper/ThemeContext";
 
 const MidComponentItem = ({ title, img, text, reverse }) => {
   const { theme } = useContext(ThemeBgContext);
+
   return (
     <div id="company">
       {reverse ? (
         <div className="sm:grid-cols-1 grid grid-cols-2 justify-items-center items-center">
           <motion.div
-            className="sm:w-full sm:pl-4 w-4/5 pl-24"
+            className="sm:w-full sm:pl-4 w-4/5 pl-24 relative"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -20,15 +21,17 @@ const MidComponentItem = ({ title, img, text, reverse }) => {
               hidden: { opacity: 0, scale: 0 },
             }}
           >
-            <h2
-              className={
-                theme === "light"
-                  ? "sm:text-4xl text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark"
-                  : "sm:text-4xl text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-white"
-              }
-            >
-              {title}
-            </h2>
+            <div className="relative">
+              <h2
+                className={
+                  theme === "light"
+                    ? "sm:text-4xl text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark relative z-10"
+                    : "sm:text-4xl text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-white relative z-10"
+                }
+              >
+                {title}
+              </h2>
+            </div>
             <p
               className={
                 theme === "light"
@@ -62,51 +65,53 @@ const MidComponentItem = ({ title, img, text, reverse }) => {
           id="room"
           className="sm:flex-col flex flex-row-reverse justify-around items-center w-full"
         >
-          <div className="sm:w-full sm:pl-4 pb-4">
-            <h2
-              className={
-                theme === "light"
-                  ? "sm:text-4xl text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark"
-                  : "sm:text-4xl text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-white"
-              }
-            >
-              {title}
-            </h2>
-
+          <div className="sm:w-full sm:pl-4 pb-4 relative">
+            <div className="relative">
+              <div
+                className={`absolute inset-0 ${
+                  theme === "light" ? "bg-white" : "bg-black"
+                } opacity-50`}
+              ></div>
+              <h2
+                className={
+                  theme === "light"
+                    ? "sm:text-4xl text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark relative z-10"
+                    : "sm:text-4xl text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-white relative z-10"
+                }
+              >
+                {title}
+              </h2>
+            </div>
             <div className="flex flex-col">
               {room.map((item) => {
                 return (
                   <div className="flex items-center py-2" key={item.id}>
-                    <div className="mr-4">
+                    <div>
                       <img
-                        className="w-16 h-16"
+                        className="w-5 h-16"
                         src={item.img}
                         alt="blueSofa"
                       ></img>
                     </div>
-                    {/* <p
-                      className={
-                        theme === "light"
-                          ? "sm:text-xl text-2xl font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark w-full "
-                          : "sm:text-xl text-2xl font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-white w-full "
-                      }
-                    >
-                      {item.name}
-                    </p> */}
+                    <div
+                      className={`absolute inset-0 ${
+                        theme === "light" ? "bg-white" : "bg-black"
+                      } opacity-50`}
+                    ></div>
                     <motion.div
                       className={
                         theme === "light"
-                          ? "sm:text-xl text-2xl font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark w-full "
-                          : "sm:text-xl text-2xl font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-white w-full "
+                          ? "sm:text-xl text-2xl font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-dark w-full relative z-10"
+                          : "sm:text-xl text-2xl font-normal font-inter no-underline align-middle tracking-wide normal-case leading-none text-white w-full relative z-10"
                       }
                       initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 1.5 }}
-          variants={{
-            visible: { opacity: 1, scale: 1 },
-            hidden: { opacity: 0, scale: 0 },
-          }}
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      transition={{ duration: 1.5 }}
+                      variants={{
+                        visible: { opacity: 1, scale: 1 },
+                        hidden: { opacity: 0, scale: 0 },
+                      }}
                     >
                       {item.name}
                     </motion.div>
