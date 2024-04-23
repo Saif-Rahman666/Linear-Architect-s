@@ -55,15 +55,17 @@ const TabsComponent = () => {
   };
 
   return (
-    <div id="features" className="flex flex-col justify-center items-center">
-      <div className="w-4/5 pl-24">
-        <h1
-          className={`${
-            theme === "light" ? "text-dark" : "text-white"
-          } sm:text-4xl text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-center`}
-        >
-          Projects
-        </h1>
+    <div id="features" className="flex flex-col justify-center items-center py-12">
+      <div className="w-4/5 pl-24 mx-auto text-center">
+        <div className={`bg-${theme === "light" ? "white" : "black"} bg-opacity-25 backdrop-blur-md px-4 py-2 rounded-md mb-6 w-3/4 mx-auto`}>
+          <h1
+            className={`${
+              theme === "light" ? "text-dark" : "text-white"
+            } sm:text-4xl text-6xl pt-10 pb-4 font-bold font-inter no-underline align-middle tracking-wide normal-case leading-none text-center mx-auto`}
+          >
+            Projects
+          </h1>
+        </div>
         <p
           className={
             theme === "light"
@@ -81,7 +83,7 @@ const TabsComponent = () => {
           value="bedroom"
           className="flex flex-col justify-center items-center content-between w-full"
         >
-          <TabsHeader className="flex justify-center items-center content-center bg-gray-100">
+          <TabsHeader className={`flex justify-center items-center content-center bg-gray-100`}>
             {tabsData.map(({ label, value }) => (
               <Tab key={value} value={value}>
                 <p className="text-black font-inter leading-normal no-underline align-middle tracking-wide normal-case">
