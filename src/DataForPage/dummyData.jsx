@@ -106,6 +106,20 @@ export const sliderData = [
     type: "Room3",
     img: kitchen4,
   },
+  {
+    id: "4",
+    title: "Room 3",
+    text: "Linear Architect's is your best firend for interior design, download the app and feel free to explore beautifule modern and premium designs.",
+    type: "Room3",
+    img: kitchen4,
+  },
+  {
+    id: "5",
+    title: "Room 3",
+    text: "Linear Architect's is your best firend for interior design, download the app and feel free to explore beautifule modern and premium designs.",
+    type: "Room3",
+    img: kitchen4,
+  },
 ];
 export const tabsData = [
   {
