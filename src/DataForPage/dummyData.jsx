@@ -124,7 +124,7 @@ export const sliderData = [
 export const tabsData = [
   {
     id: "0",
-    label: "Bedroom",
+    label: "Residence",
     value: "bedroom",
     desc: `Linear Architect's is your best firend for interior design, download the app and feel free to explore beautifule modern and premium designs.`,
     images: [bedRoom1, bedRoom2, bedRoom3],
@@ -132,7 +132,7 @@ export const tabsData = [
   },
   {
     id: "1",
-    label: "LivingRoom",
+    label: "Office",
     value: "livingroom",
     desc: "Linear Architect's is your best firend for interior design, download the app and feel free to explore beautifule modern and premium designs.",
     images: [livingRoom1, livingRoom2, livingRoom3],
@@ -141,7 +141,7 @@ export const tabsData = [
 
   {
     id: "2",
-    label: "Kitchen",
+    label: "Restaurent",
     value: "kitchen",
     desc: `Linear Architect's is your best firend for interior design, download the app and feel free to explore beautifule modern and premium designs.`,
     images: [kitchen1, kitchen2, kitchen3],
@@ -150,7 +150,7 @@ export const tabsData = [
 
   {
     id: "3",
-    label: "Office",
+    label: "Shop",
     value: "office",
     desc: ` Linear Architect's is your best firend for interior design, download the app and feel free to explore beautifule modern and premium designs.`,
     images: [office1, office2, office3],
@@ -159,7 +159,7 @@ export const tabsData = [
 
   {
     id: "4",
-    label: "Dining Room",
+    label: "Resort",
     value: "kidsroom",
     desc: `Linear Architect's is your best firend for interior design, download the app and feel free to explore beautifule modern and premium designs.`,
     images: [dining1, dining2, dining3],
@@ -173,6 +173,11 @@ export const tabsData = [
     images: [exterior1, exterior2, exterior3],
     
   },
+  {
+    id: "6",
+    label: "Landscape",
+    images: [dining1, dining2, dining3],
+  }
 ];
 export const cardData = [
   {

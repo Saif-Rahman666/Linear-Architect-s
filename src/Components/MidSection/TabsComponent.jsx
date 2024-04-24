@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useRef } from "react";
 import { Tabs, TabsHeader, TabsBody, TabPanel, Tab } from "@material-tailwind/react";
 import Modal from "react-modal";
 import Slider from "react-slick";
@@ -10,15 +10,19 @@ import { ThemeBgContext } from "../ContextWrapper/ThemeContext";
 const TabsComponent = () => {
   const { theme } = useContext(ThemeBgContext);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImages, setSelectedImages] = useState([]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const sliderRef = useRef(null);
 
-  const openModal = (image) => {
-    setSelectedImage(image);
+  const openModal = (images, index) => {
+    setSelectedImages(images);
+    setSelectedIndex(index);
     setModalIsOpen(true);
   };
 
   const closeModal = () => {
-    setSelectedImage(null);
+    setSelectedImages([]);
+    setSelectedIndex(0);
     setModalIsOpen(false);
   };
 
@@ -28,30 +32,26 @@ const TabsComponent = () => {
   };
 
   const sliderSettings = {
-    dots: true,
-    infinite: true,
+    dots: false,
+    infinite: false,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-    ],
+    initialSlide: selectedIndex,
+  };
+
+  const customButtonStyle = {
+    position: "absolute",
+    top: "50%",
+    transform: "translateY(-50%)",
+    zIndex: 1,
+    background: "transparent",
+    color: "white",
+    padding: "8px",
+    borderRadius: "50%",
+    cursor: "pointer",
+    opacity: "0.5",
+    transition: "opacity 0.3s",
   };
 
   return (
@@ -74,7 +74,7 @@ const TabsComponent = () => {
           }
         >
           Linear Architect's offers many great features. You can create your own room,
-          request a service, make modern looking Design, generate ideas for you
+          request a service, make modern-looking designs, generate ideas for you,
           and so much more. Take a sneak peek at each of them.
         </p>
 
@@ -83,10 +83,10 @@ const TabsComponent = () => {
           value="bedroom"
           className="flex flex-col justify-center items-center content-between w-full"
         >
-          <TabsHeader className={`flex justify-center items-center content-center bg-gray-100`}>
+          <TabsHeader className={`flex justify-center items-center content-center bg-gray-100 gap-4`}>
             {tabsData.map(({ label, value }) => (
               <Tab key={value} value={value}>
-                <p className="text-black font-inter leading-normal no-underline align-middle tracking-wide normal-case">
+                <p className="text-lg font-bold text-black font-inter leading-normal no-underline align-middle tracking-wide normal-case">
                   {label}
                 </p>
               </Tab>
@@ -107,10 +107,10 @@ const TabsComponent = () => {
                       className="px-2 transition-transform duration-300 transform hover:rotate-3"
                     >
                       <img
-                        className="h-[550px] w-[350px] mx-auto my-2 object-cover rounded-lg shadow-lg cursor-pointer"
+                        className="h-[900px] w-[800px] mx-auto my-2 object-cover rounded-lg shadow-lg cursor-pointer"
                         src={image}
                         alt="phone"
-                        onClick={() => openModal(image)}
+                        onClick={() => openModal(handleTabClick(value), index)}
                       />
                     </div>
                   ))}
@@ -130,14 +130,41 @@ const TabsComponent = () => {
             backgroundColor: "rgba(0, 0, 0, 0.5)",
           },
           content: {
-            maxWidth: "80%",
-            maxHeight: "80%",
+            maxWidth: "90%",
+            maxHeight: "100%",
             margin: "auto",
+            padding: 0,
           },
         }}
       >
         <button onClick={closeModal}>Close</button>
-        {selectedImage && <img src={selectedImage} alt="selected" />}
+        <div style={{ position: "relative", width: "100%", height: "100%" }}>
+          <Slider
+            {...sliderSettings}
+            ref={sliderRef}
+            afterChange={(index) => setSelectedIndex(index)}
+          >
+            {selectedImages.map((image, index) => (
+              <div key={index}>
+                <img src={image} alt={`image-${index}`} style={{ width: "100%", height: "100%" }} />
+              </div>
+            ))}
+          </Slider>
+          <button
+            style={{ ...customButtonStyle, left: 0 }}
+            onClick={() => sliderRef.current.slickPrev()}
+            disabled={selectedIndex === 0}
+          >
+            {"<"}
+          </button>
+          <button
+            style={{ ...customButtonStyle, right: 0 }}
+            onClick={() => sliderRef.current.slickNext()}
+            disabled={selectedIndex === selectedImages.length - 1}
+          >
+            {">"}
+          </button>
+        </div>
       </Modal>
     </div>
   );
