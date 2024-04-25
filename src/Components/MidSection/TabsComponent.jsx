@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { tabsData } from "../../DataForPage/dummyData";
 import { ThemeBgContext } from "../ContextWrapper/ThemeContext";
+import "./TabsComponent.css"; 
 
 const TabsComponent = () => {
   const { theme } = useContext(ThemeBgContext);
@@ -40,19 +41,19 @@ const TabsComponent = () => {
     initialSlide: selectedIndex,
   };
 
-  const customButtonStyle = {
-    position: "absolute",
-    top: "50%",
-    transform: "translateY(-50%)",
-    zIndex: 1,
-    background: "transparent",
-    color: "white",
-    padding: "8px",
-    borderRadius: "50%",
-    cursor: "pointer",
-    opacity: "0.5",
-    transition: "opacity 0.3s",
-  };
+  // const customButtonStyle = {
+  //   position: "absolute",
+  //   top: "50%",
+  //   transform: "translateY(-50%)",
+  //   zIndex: 1,
+  //   background: "transparent",
+  //   color: "white",
+  //   padding: "8px",
+  //   borderRadius: "50%",
+  //   cursor: "pointer",
+  //   opacity: "0.5",
+  //   transition: "opacity 0.3s",
+  // };
 
   return (
     <div id="features" className="flex flex-col justify-center items-center py-12">
@@ -150,7 +151,7 @@ const TabsComponent = () => {
               </div>
             ))}
           </Slider>
-          <button
+          {/* <button
             style={{ ...customButtonStyle, left: 0 }}
             onClick={() => sliderRef.current.slickPrev()}
             disabled={selectedIndex === 0}
@@ -163,7 +164,7 @@ const TabsComponent = () => {
             disabled={selectedIndex === selectedImages.length - 1}
           >
             {">"}
-          </button>
+          </button> */}
         </div>
       </Modal>
     </div>

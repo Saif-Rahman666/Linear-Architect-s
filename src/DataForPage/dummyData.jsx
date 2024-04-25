@@ -185,7 +185,7 @@ export const cardData = [
     title: "Satisfied Clients",
     start: 100, // Start point
     end: 900,   // End point
-    duration: 10.5, // Duration of animation
+    duration: 20.5, // Duration of animation
     text: "+",
   },
   {
@@ -193,7 +193,7 @@ export const cardData = [
     title: "Designs Completed",
     start: 880, // Start point
     end: 1950,   // End point
-    duration: 10.5, // Duration of animation
+    duration: 20.5, // Duration of animation
     text: "+",
   },
   {
@@ -201,7 +201,7 @@ export const cardData = [
     title: "Awards Won",
     start: 1, // Start point
     end: 15,   // End point
-    duration: 10.5, // Duration of animation
+    duration: 20.5, // Duration of animation
     text: "+",
   },
 ];
