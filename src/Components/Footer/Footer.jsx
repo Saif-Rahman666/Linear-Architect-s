@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  FaPhoneAlt,
-  FaWhatsapp,
-  FaFacebook,
-} from "react-icons/fa";
-// import MapComponent from "./MapComponent";
+import { FaPhoneAlt, FaWhatsapp, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -12,31 +7,29 @@ const Footer = () => {
     <div className="bg-yellow-700 py-6 text-black"> {/* Reduced padding */}
       <div className="container mx-auto flex flex-wrap justify-between gap-6">
         <div className="flex flex-col items-center sm:items-start">
-          {/* <img className="h-16" src={logo} alt="logo" /> */}
-          <h3 className="text-lg font-bold mb-2">Address</h3>
+          <h3 className="text-lg font-bold mb-2 bg-black text-white px-2 text-xl">Address</h3> {/* Added black background and white text */}
           <div>
-            <h3 className="text-lg font-medium mb-2">Head Office</h3>
-            <p>
+            <h3 className="text-lg font-medium mb-2 bg-black text-white px-2 text-xl">Head Office</h3> {/* Added black background and white text */}
+            <p className="text-base"> {/* Slightly larger font size */}
               158/A, M Halim Road, Bagan Bari, Dhaka Cantonment, Dhaka - 1206
             </p>
           </div>
           <div className="mt-4">
-            <h3 className="text-lg font-medium mb-2">Branch Office</h3>
-            <p>
-              1st Floor, Station Plaza, Station Road, Sadar Dinajpur, Dinajpur
-              - 5200
+            <h3 className="text-lg font-medium mb-2 bg-black text-white px-2 text-xl">Branch Office</h3> {/* Added black background and white text */}
+            <p className="text-base"> {/* Slightly larger font size */}
+              1st Floor, Station Plaza, Station Road, Sadar Dinajpur, Dinajpur - 5200
             </p>
           </div>
         </div>
         <div className="flex flex-col items-center sm:items-start">
-          <h3 className="text-lg font-bold mb-2">Contact Us</h3>
+          <h3 className="text-lg font-bold mb-2 bg-black text-white px-2 text-xl">Contact Us</h3> {/* Added black background and white text */}
           <div className="flex items-center mb-2">
             <FaPhoneAlt className="mr-2" />
-            <p>+8801301370905</p>
+            <p className="text-base">+8801746310486</p> {/* Slightly larger font size */}
           </div>
           <div className="flex items-center mb-2">
             <FaWhatsapp className="mr-2" />
-            <p>+8801784933989</p>
+            <p className="text-base">+8801784933989</p> {/* Slightly larger font size */}
           </div>
           <a
             href="https://www.facebook.com/Lineararchitects?mibextid=ZbWKwL"
@@ -45,7 +38,7 @@ const Footer = () => {
             className="flex items-center"
           >
             <FaFacebook className="mr-2" />
-            <p>Facebook</p>
+            <p className="text-base">Facebook</p> {/* Slightly larger font size */}
           </a>
           <a
             href="mailto:lineararchitectsltd@gmail.com"
@@ -63,11 +56,11 @@ const Footer = () => {
                 clipRule="evenodd"
               />
             </svg>
-            <p>lineararchitectsltd@gmail.com</p>
+            <p className="text-base">lineararchitectsltd@gmail.com</p> {/* Slightly larger font size */}
           </a>
         </div>
         <div className="flex flex-col items-center sm:items-start">
-          <h3 className="text-lg font-bold mb-2">Map</h3>
+          <h3 className="text-lg font-bold mb-2 bg-black text-white px-2 text-xl">Location</h3> {/* Added black background and white text */}
           <div className="bg-white rounded-lg shadow-md p-4">
             <iframe
               title="Google Maps"
@@ -84,8 +77,8 @@ const Footer = () => {
         <hr className="w-full bg-black h-0.5" />
       </div>
       <div className="container mx-auto flex justify-between items-center mt-4"> {/* Adjusted margin top */}
-        <p>Linear Architect's</p>
-        <p>© {year} Page by Linear Architect's</p>
+        <p className="text-base">Linear Architect's</p> {/* Slightly larger font size */}
+        <p className="text-base">© {year} Page by Linear Architect's</p> {/* Slightly larger font size */}
       </div>
     </div>
   );
