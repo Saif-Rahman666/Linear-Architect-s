@@ -83,8 +83,8 @@ const MidFilterSection = () => {
             backgroundColor: "rgba(0, 0, 0, 0.5)"
           },
           content: {
-            maxWidth: "80%",
-            maxHeight: "80%",
+            maxWidth: "100%",
+            maxHeight: "100%",
             margin: "auto"
           }
         }}

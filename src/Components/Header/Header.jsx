@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { Switch } from "@material-tailwind/react";
 import { ThemeBgContext } from "../ContextWrapper/ThemeContext";
-import { Experience } from "../Animation/Experience";
 import { Canvas } from "@react-three/fiber";
+import { Experience } from "../Animation/Experience";
 
 const Header = ({ topRef }) => {
   const { theme, handleTheme } = useContext(ThemeBgContext);
@@ -51,7 +51,7 @@ const Header = ({ topRef }) => {
         </div>
         <div className="sm:w-full sm:pl-4 w-full  mt-4">
           <div 
-          className="sm:h-[475px] h-[765px] w-full bg-no-repeat bg-center relative z-10 header rounded-xl">
+          className="sm:h-[475px] h-[765px] w-full bg-no-repeat bg-center relative z-0 header rounded-xl">
           <Canvas camera ={{
             fov : 64,
             position : [2.3, 1.5, 2.3],
